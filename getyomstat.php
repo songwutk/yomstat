@@ -3,7 +3,7 @@ require_once('scraper.php' );
 require_once('simple_html_dom.php');
 
 $scraper = new Scraper();
-$pageUrl = 'http://hydro-1.net/08HYDRO/HD-06/HOURLY.html#yom';
+$pageUrl = 'http://hydro-1.net/08HYDRO/HD-04/houly/water_today.php?station_id1=Y.20&station_id2=Y.1C';
 $pageHtmlContent = $scraper->curl($pageUrl);
 $subHtmlContent =  $scraper->getValueByTagName($pageHtmlContent, '<div id="yom"></div>', '<div id="nan"></div>');
 $subHtmlContent =  $scraper->getValueByTagName($subHtmlContent, '<TABLE class="table-bordered" width="87%">', '<DIV align=left>');
